@@ -6,8 +6,8 @@ public class Student {
 	private String id;
 	private String name;
 	private String address;
-	private String dateOfBirth;
-	public Student(String id, String name, String address, String dateOfBirth) {
+	private LocalDate dateOfBirth;
+	public Student(String id, String name, String address, LocalDate dateOfBirth) {
 		this.id = id;
 		this.name = name;
 		this.address = address;
@@ -31,10 +31,10 @@ public class Student {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getDateOfBirth() {
+	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}
-	public void setDateOfBirth(String dateOfBirth) {
+	public void setDateOfBirth(LocalDate dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 	@Override

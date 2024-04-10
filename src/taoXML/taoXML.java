@@ -2,6 +2,7 @@ package taoXML;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -45,9 +46,11 @@ public class taoXML {
 		address.appendChild(doc.createTextNode("dien duong"));
 		student.appendChild(address);
 		
-		Element date= doc.createElement("date");
-		date.appendChild(doc.createTextNode("2000"));
-		student.appendChild(date);
+		LocalDate date= LocalDate.of(2000, 4, 28);
+		String sdate= date.toString();
+		Element dateofbird= doc.createElement("dateofBird");
+		dateofbird.appendChild(doc.createTextNode(sdate));
+		student.appendChild(dateofbird);
 		
 		TransformerFactory tff=TransformerFactory.newInstance();
 		Transformer tf= tff.newTransformer();
